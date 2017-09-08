@@ -1,0 +1,65 @@
+---
+layout: coverage
+---
+<div class='coverage'>
+    
+    <div class="row">
+        <div class="col-md-20">
+            <h2>Coverage</h2>
+        </div>
+        <div class="col-md-4 text-right">
+            <h2 class="text-right"><%= (@coverage * 100).round(2) %>%</h2>
+        </div>
+    </div>
+        <% cont = 0 %>
+        <% @targets.each do |value| %>
+            <div class="row targets">
+                <div class="col-md-20">
+                    <h4><%= value['name'] %></h4>
+                </div>
+                <div class="col-md-4 text-right">
+                    <h4><%= (value['coverage'] * 100).round(2) %>%</h4>
+                </div>
+            </div>
+            
+            <% value['files'].each do |file| %>
+            <% cont = cont + 1 %>
+                        <ol class="list-items">
+                            <li class="list-items-row">
+                                <div data-toggle="collapse" aria-expanded="false" data-target="#list-item-line-<%= cont %>">
+                                    <div class="row">
+                                        <div class="col-md-2 col-md-offset-2">
+                                            <i class="glyph glyph-add"></i>
+                                            <i class="glyph glyph-remove"></i>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a><%= file['name'] %></a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <%= file['type'] %>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <%= (file['coverage'] * 100).round(2) %>%
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="collapse" id="list-item-line-<%= cont %>">
+                                    <% file['functions'].each do |function| %>
+                                        <div class="row functions">
+                                            <div class="col-md-18 col-md-offset-2">
+                                            <%= function['name'] %>
+                                            </div>
+                                            <div class="col-md-4 text-right">
+                                                <%= (function['coverage'] * 100).round(2) %>%
+                                            </div>
+                                        </div>
+                                    <% end %>
+                                </div>
+                            </li>
+                        </ol>
+            <% end %>
+        <% end %>
+    </div>
+
+     
