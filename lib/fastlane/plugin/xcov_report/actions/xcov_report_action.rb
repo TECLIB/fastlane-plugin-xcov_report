@@ -6,7 +6,7 @@ module Fastlane
         require "erb"
         require 'json'
 
-        file = File.read(File.expand_path('fastlane-plugin-xcov_report/lib/fastlane/plugin/xcov_report/actions/page.html.erb'))
+        file = File.read(File.expand_path('coverage/report.json'))
         data = JSON.parse(file)
         @coverage = data['coverage']
         @targets = data['targets']
