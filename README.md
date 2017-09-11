@@ -1,6 +1,6 @@
 # xcov_report plugin
 
-[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-xcov_report)
+[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-xcov_report) [![Gem Version](https://badge.fury.io/rb/fastlane-plugin-xcov_report.svg)](https://badge.fury.io/rb/fastlane-plugin-xcov_report)
 
 ## Getting Started
 
