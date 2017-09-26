@@ -45,7 +45,7 @@ layout: coverage
                                             <i class="glyph glyph-remove"></i>
                                         </div>
                                         <div class="col-md-8">
-                                            <a><%= file["name"] %></a>
+                                            <a href="#"><%= file["name"] %></a>
                                         </div>
                                         <div class="col-md-6">
                                             <%= file["type"] %>
