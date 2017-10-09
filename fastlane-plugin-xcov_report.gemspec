@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'gianfrancomanganiello1997@gmail.com'
 
   spec.summary       = 'Generate custom HTML for coverage'
-  spec.homepage      = "https://github.com/Gianfranco97/xcov-report"
+  spec.homepage      = "https://github.com/flyve-mdm/xcov-report"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
