@@ -1,9 +1,9 @@
-title: ios inventory
+title: fastlane plugin xcov_report
 email: ml-flyvemdm@teclib.com
 twitter: flyvemdm
-baseurl: "/glpi-library-ios"
+baseurl: "/fastlane-plugin-xcov_report"
 url: "http://flyve.org"   
-image: http://flyve.org/glpi-library-ios/images/logo2.png
+image: http://flyve.org/fastlane-plugin-xcov_report/images/logo2.png
 
 # Build settings
 markdown: kramdown
@@ -13,7 +13,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-repository: flyve-mdm/glpi-library-ios
+repository: flyve-mdm/fastlane-plugin-xcov_report
 
 sass:
     style: compressed
