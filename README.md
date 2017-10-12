@@ -3,7 +3,7 @@
 ![Flyve MDM banner](https://user-images.githubusercontent.com/663460/26935464-54267e9c-4c6c-11e7-86df-8cfa6658133e.png)
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-xcov_report) [![Gem Version](https://badge.fury.io/rb/fastlane-plugin-xcov_report.svg)](https://badge.fury.io/rb/fastlane-plugin-xcov_report)
-[![License](https://img.shields.io/github/license/flyve-mdm/flyve-mdm-android-inventory-agent.svg?&label=License)](https://github.com/flyve-mdm/fastlane-plugin-xcov_report/blob/master/LICENSE.md)
+[![License MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/flyve-mdm/fastlane-plugin-xcov_report/blob/master/LICENSE.md)
 [![Follow twitter](https://img.shields.io/twitter/follow/FlyveMDM.svg?style=social&label=Twitter&style=flat-square)](https://twitter.com/FlyveMDM)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-blue.svg)](https://t.me/flyvemdm)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
@@ -15,7 +15,6 @@ To get started, check out [Flyve MDM website](https://flyve-mdm.com/)!
 ## Table of Contents
 
 * [Synopsis](#synopsis)
-* [Build Status](#build-status)
 * [Installation](#installation)
 * [Examples](#examples)
 * [Documentation](#documentation)
