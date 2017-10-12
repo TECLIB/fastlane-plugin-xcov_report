@@ -109,5 +109,13 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 ## Test and Build
 
-TBA
+To run both the tests, and code style validation, run
 
+```
+rake
+```
+
+To automatically fix many of the styling issues, use
+```
+rubocop -a
+```
