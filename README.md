@@ -28,8 +28,6 @@ To get started, check out [Flyve MDM website](https://flyve-mdm.com/)!
 
 **x_cov report** allows you to generate custom HTML for coverage.
 
-This project is a **work in progress**. The information here provided could change at any given time.
-
 ### Troubleshooting
 
 If you have trouble using plugins, check out the [Plugins Troubleshooting](https://docs.fastlane.tools/plugins/plugins-troubleshooting/) guide.
@@ -41,12 +39,6 @@ For more information about how the `fastlane` plugin system works, check out the
 ### About _fastlane_
 
 _fastlane_ is the easiest way to automate beta deployments and releases for your iOS and Android apps. To learn more, check out [fastlane.tools](https://fastlane.tools).
-
-## Build Status
-
-|**Release channel**|Beta Channel|
-|:---:|:---:|
-|||
 
 ## Installation
 
