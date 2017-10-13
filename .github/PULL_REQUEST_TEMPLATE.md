@@ -1,7 +1,7 @@
 ## Checklist
 Please check if your PR fulfills the following requirements:
 
-- [ ] The commit message follows our guidelines: [Conventional Commit](https://github.com/flyve-mdm//blob/master/CONTRIBUTING.md#submit-a-pull-request)
+- [ ] The commit message follows our guidelines: [Conventional Commit](https://github.com/flyve-mdm/fastlane-plugin-xcov_report/blob/master/CONTRIBUTING.md#submit-a-pull-request)
 - [ ] Tests for the changes have been added (for bug fixes / features)
 - [ ] Docs have been added / updated (for bug fixes / features)
 
