@@ -11,7 +11,7 @@ PLEASE HELP US PROCESS GITHUB ISSUES FASTER BY PROVIDING THE FOLLOWING INFORMATI
 [ ] Bug report  <!-- Please search GitHub for a similar issue or PR before submitting -->
 [ ] Feature request
 [ ] Documentation issue or request
-[ ] Support request => Please do not submit support request here, instead see https://github.com/flyve-mdm/fastlane-plugin-xcov_report/blob/master/CONTRIBUTING.md#submit-a-pull-request
+[ ] Support request => Please do not submit support request here, instead see https://github.com/flyve-mdm/fastlane-plugin-xcov_report/blob/master/CONTRIBUTING.md#questions-or-doubts
 </code></pre>
 
 ## Current behavior
@@ -37,4 +37,3 @@ For bug reports please provide the *STEPS TO REPRODUCE* and if possible a *MINIM
  xcov_report Version: X.Y.Z
 <!-- Check whether this is still an issue in the most recent version, and add relevant information like Operating system version, IDE, package manager, HTTP server, browser ... -->
 </code></pre>
-
