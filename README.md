@@ -1,16 +1,16 @@
-# xcov_report a Flyve MDM plugin for Fastlane
+# xcov_report a plugin for Fastlane
 
-![Flyve MDM banner](https://user-images.githubusercontent.com/663460/26935464-54267e9c-4c6c-11e7-86df-8cfa6658133e.png)
+![Teclib' banner](https://user-images.githubusercontent.com/29282308/31669540-abed67a8-b355-11e7-98e2-0ad190f37088.png)
 
-[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-xcov_report) [![Gem Version](https://badge.fury.io/rb/fastlane-plugin-xcov_report.svg)](https://badge.fury.io/rb/fastlane-plugin-xcov_report)
-[![License MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/flyve-mdm/fastlane-plugin-xcov_report/blob/master/LICENSE.md)
+[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/develop/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-xcov_report) [![Gem Version](https://badge.fury.io/rb/fastlane-plugin-xcov_report.svg)](https://badge.fury.io/rb/fastlane-plugin-xcov_report)
+[![License MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/flyve-mdm/fastlane-plugin-xcov_report/blob/develop/LICENSE.md)
 [![Follow twitter](https://img.shields.io/twitter/follow/FlyveMDM.svg?style=social&label=Twitter&style=flat-square)](https://twitter.com/FlyveMDM)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-blue.svg)](https://t.me/flyvemdm)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-Flyve MDM is a mobile device management software that enables you to secure and manage all the mobile devices of your business via a unique web-based console (MDM).
+Teclib’ is an open source software editor that offers a vast range of fully integrated open source technology packages, to better respond to business needs.
 
-To get started, check out [Flyve MDM website](https://flyve-mdm.com/)!
+To get started, check out [Teclib' website](http://www.teclib-edition.com/en/)!
 
 ## Table of Contents
 
