@@ -4,7 +4,7 @@
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/develop/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-xcov_report) [![Gem Version](https://badge.fury.io/rb/fastlane-plugin-xcov_report.svg)](https://badge.fury.io/rb/fastlane-plugin-xcov_report)
 [![License MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/flyve-mdm/fastlane-plugin-xcov_report/blob/develop/LICENSE.md)
-[![Follow twitter](https://img.shields.io/twitter/follow/FlyveMDM.svg?style=social&label=Twitter&style=flat-square)](https://twitter.com/FlyveMDM)
+[![Follow twitter](https://img.shields.io/twitter/follow/FlyveMDM.svg?style=social&label=Twitter&style=flat-square)](https://twitter.com/Teclib)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-blue.svg)](https://t.me/flyvemdm)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
@@ -57,14 +57,13 @@ We maintain a detailed documentation of the project in the [project's website](h
 
 ## Versioning
 
-In order to provide transparency on our release cycle and to maintain backward compatibility, Flyve MDM is maintained under [the Semantic Versioning guidelines](http://semver.org/). We are committed to following and complying with the rules, the best we can.
+In order to provide transparency on our release cycle and to maintain backward compatibility, this project is maintained under [the Semantic Versioning guidelines](http://semver.org/). We are committed to following and complying with the rules, the best we can.
 
-See [the tags section of our GitHub project](https://github.com/flyve-mdm/fastlane-plugin-xcov_report/tags) for changelogs for each release version of Flyve MDM. Release announcement posts on [the official Teclib' blog](http://www.teclib-edition.com/en/communities/blog-posts/) contain summaries of the most noteworthy changes made in each release.
+See [the tags section of our GitHub project](https://github.com/flyve-mdm/fastlane-plugin-xcov_report/tags) for changelogs for each release version. Release announcement posts on [the official Teclib' blog](http://www.teclib-edition.com/en/communities/blog-posts/) contain summaries of the most noteworthy changes made in each release.
 
 ## Contact
 
-For notices about major changes and general discussion of Flyve MDM development, subscribe to the [/r/FlyveMDM](http://www.reddit.com/r/FlyveMDM) subreddit.
-You can also chat with us via IRC in [#flyve-mdm on freenode](http://webchat.freenode.net/?channels=flyve-mdm]) or [@flyvemdmdev on Telegram](https://t.me/flyvemdmdev).
+For notices about major changes and general discussion of Teclib' products development, visit to the [Official Website](http://www.teclib-edition.com/en/). You can also chat with us [on Telegram](https://t.me/flyvemdmdev).
 
 ## Contribute
 
@@ -73,7 +72,6 @@ guidelines for [contributing](./CONTRIBUTING.md) and then check out one of our i
 
 ## Copying
 
-* **Name**: [Flyve MDM](https://flyve-mdm.com/) is a registered trademark of [Teclib'](http://www.teclib-edition.com/en/).
 * **Code**: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License ([GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)).
+    it under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 * **Documentation**: released under Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
