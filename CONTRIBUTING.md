@@ -2,26 +2,13 @@
 
 Welcome to our ever growing community! We are more than happy to accept external contributions to the project in the form of feedback, bug reports and even better, pull requests!
 
-As a contributor, we present you the guidelines to start contributing in any of the Flyve MDM projects.
+As a contributor, we present you the guidelines to start contributing in any of the Teclib' projects.
 
-* [Code of Conduct](#code-of-conduct)
 * [Questions or Doubts?](#questions-or-doubts)
 * [Bugs](#found-a-bug)
 * [Proposed Features](#new-feature)
 * [Submitting issues and Pull Requests](#submitting)
 * [Coding Rules](#coding-rules)
-
-### Code of Conduct
-
-As contributors and maintainers of the Teclib' projects, we pledge to respect everyone who contributes by posting issues, updating documentation, submitting pull requests, providing feedback in comments, and any other activities.
-
-Communication through any of our channels (GitHub, Telegram, mailing lists, Google+, Twitter, etc.) must be constructive and never resort to personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
-
-We promise to extend courtesy and respect to everyone involved in this project regardless of gender, gender identity, sexual orientation, disability, age, race, ethnicity, religion, or level of experience. We expect anyone contributing to the Teclib' projects to do the same.
-
-If any member of the community violates this code of conduct, the maintainers of the Teclib' projects may take action, removing issues, comments, and PRs or blocking accounts as deemed appropriate.
-
-If you are subject to or witness unacceptable behavior, or have any other concerns, please email us at contact@teclib.com
 
 ### Questions or Doubts
 
@@ -70,7 +57,7 @@ Before submitting your Pull Request check  for an open or closed PR that relates
 
 - Make your changes in a new branch, the project is organized according to the branch model [Git Flow](http://git-flow.readthedocs.io/en/latest/), though this is not mandatory it's really useful:
 
-```
+```console
     git checkout -b my-fix-branch develop
 ```
 
@@ -80,7 +67,7 @@ Before submitting your Pull Request check  for an open or closed PR that relates
 
 - Push your branch to GitHub:
 
-```
+```console
     git push origin my-fix-branch
 ```
 
@@ -116,6 +103,7 @@ rake
 ```
 
 To automatically fix many of the styling issues, use
+
 ```
 rubocop -a
 ```
