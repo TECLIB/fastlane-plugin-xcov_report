@@ -1,7 +1,7 @@
 repository:
   name: fastlane-plugin-xcov_report
   description: Generates an HTML based on JSON generated from xcov
-  homepage: http://flyve.org/fastlane-plugin-xcov_report/
+  homepage: https://teclib.github.io/fastlane-plugin-xcov_report/
   topics: fastlane-plugin, xcov-report
   private: false
   has_issues: true
