@@ -17,7 +17,9 @@ references:
   install_dependencies: &install_dependencies
     run:
       name: Update the project dependencies
-      command: bundle install
+      command: |
+        bundle install
+        npm install
 
   # Build
   build: &build
@@ -29,7 +31,7 @@ references:
   unit_test: &unit_test
     run:
       name: Run unit tests
-      command: bundle exec rake
+      command: npm test
 
 jobs:
   test:
