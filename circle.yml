@@ -26,6 +26,20 @@ references:
     run:
       name: Gem build
       command: gem build fastlane-plugin-xcov_report.gemspec
+  
+  # Handle cache
+  build_key: &build_key
+    build-app-{{ .Environment.CIRCLE_WORKFLOW_ID }}
+
+  store_build_cache: &store_build_cache
+    save_cache:
+      key: *build_key
+      paths:
+        - ./*.gem
+  
+  restore_build_cache: &restore_build_cache
+    restore_cache:
+      key: *build_key
 
   # Tests
   unit_test: &unit_test
@@ -42,8 +56,26 @@ jobs:
       - *install_dependencies
       - *unit_test
 
+  build:
+    <<: *container_config
+
+    steps:
+      - checkout
+      - *install_dependencies
+      - *build
+      - *store_build_cache
+
 workflows:
   version: 2
   build-test-deploy:
     jobs:
-      - test
+      - test:
+          filters:
+            branches:
+              ignore:
+                - master
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master
