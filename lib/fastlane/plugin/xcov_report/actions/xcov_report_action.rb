@@ -1,10 +1,13 @@
+require 'fastlane/action'
+require_relative '../helper/xcov_report_helper'
+
 module Fastlane
   module Actions
     class XcovReportAction < Action
       def self.run(params)
         UI.message("The xcov_report plugin is working!")
         require "erb"
-        require 'json'
+        require "json"
 
         file = File.read(File.expand_path('coverage/report.json'))
         data = JSON.parse(file)
@@ -14,7 +17,7 @@ module Fastlane
 layout: coverage
 ---
 <div class="coverage">
-    
+
     <div class="row">
         <div class="col-md-20">
             <h2>Coverage</h2>
@@ -33,7 +36,7 @@ layout: coverage
                     <h4><%= (value["coverage"] * 100).round(2) %>%</h4>
                 </div>
             </div>
-            
+
             <% value["files"].each do |file| %>
             <% cont = cont + 1 %>
                         <ol class="list-items">
@@ -55,7 +58,7 @@ layout: coverage
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <div class="collapse" id="list-item-line-<%= cont %>">
                                     <% file["functions"].each do |function| %>
                                         <div class="row functions">
@@ -72,16 +75,14 @@ layout: coverage
                         </ol>
             <% end %>
         <% end %>
-    </div>      
+    </div>
         '
-     
-        renderer = ERB.new(template)
-        result = renderer.result(binding())
+
+        result = ERB.new(template).result(binding())
 
         open('coverage/index.html', 'w') do |f|
           f.puts result
         end
-
       end
 
       def self.description
@@ -113,7 +114,7 @@ layout: coverage
 
       def self.is_supported?(platform)
         # Adjust this if your plugin only works for a particular platform (iOS vs. Android, for example)
-        # See: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+        # See: https://docs.fastlane.tools/advanced/#control-configuration-by-lane-and-by-platform
         #
         # [:ios, :mac, :android].include?(platform)
         true
