@@ -2,11 +2,9 @@ version: 2 # use CircleCI 2.0
 
 references:
   # Configuration
-  workspace: &workspace
-    ~/xcov_report
-  
-  docker_image: &docker_image
-    circleci/ruby:2.4-node
+  workspace: &workspace ~/xcov_report
+
+  docker_image: &docker_image circleci/ruby:2.4-node
 
   container_config: &container_config
     docker:
@@ -23,7 +21,7 @@ references:
     run:
       name: Update the project dependencies
       command: |
-        apt-get -y install jq
+        sudo apt-get -y install jq
         bundle install
         npm install
 
@@ -41,9 +39,17 @@ references:
 
   # Publish plugin
   publish_beta: &publish_beta
-  run:
+    run:
       name: Publish beta
       command: source ci/scripts/publish_beta.sh
+
+  publish_new_version: &publish_new_version
+    run:
+      name: Publish new version
+      command: |
+        source ci/scripts/git_config.sh
+        source ci/scripts/publish_new_version.sh
+        source ci/scripts/release.sh
 
 jobs:
   test:
@@ -61,8 +67,8 @@ jobs:
       - checkout
       - *install_dependencies
       - *build
-  
-  deploy_beta: 
+
+  deploy_beta:
     <<: *container_config
 
     steps:
@@ -71,7 +77,7 @@ jobs:
       - *create_rubygems_credentials
       - *publish_beta
 
-  release: 
+  release:
     <<: *container_config
 
     steps:
@@ -102,3 +108,8 @@ workflows:
             branches:
               only:
                 - develop
+      - release:
+          filters:
+            branches:
+              only:
+                - /^release/.*/
