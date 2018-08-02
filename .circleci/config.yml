@@ -13,11 +13,17 @@ references:
       - image: *docker_image
     working_directory: *workspace
 
+  create_rubygems_credentials: &create_rubygems_credentials
+    run:
+      name: Configure RubyGems credentials
+      command: source ci/scripts/cofigure_rubygems_credentials.sh
+
   # Dependencies
   install_dependencies: &install_dependencies
     run:
       name: Update the project dependencies
       command: |
+        apt-get -y install jq
         bundle install
         npm install
 
@@ -27,25 +33,17 @@ references:
       name: Gem build
       command: gem build fastlane-plugin-xcov_report.gemspec
   
-  # Handle cache
-  build_key: &build_key
-    build-app-{{ .Environment.CIRCLE_WORKFLOW_ID }}
-
-  store_build_cache: &store_build_cache
-    save_cache:
-      key: *build_key
-      paths:
-        - ./*.gem
-  
-  restore_build_cache: &restore_build_cache
-    restore_cache:
-      key: *build_key
-
   # Tests
   unit_test: &unit_test
     run:
       name: Run unit tests
       command: npm test
+
+  # Publish plugin
+  publish_beta: &publish_beta
+  run:
+      name: Publish beta
+      command: source ci/scripts/publish_beta.sh
 
 jobs:
   test:
@@ -63,7 +61,24 @@ jobs:
       - checkout
       - *install_dependencies
       - *build
-      - *store_build_cache
+  
+  deploy_beta: 
+    <<: *container_config
+
+    steps:
+      - checkout
+      - *install_dependencies
+      - *create_rubygems_credentials
+      - *publish_beta
+
+  release: 
+    <<: *container_config
+
+    steps:
+      - checkout
+      - *install_dependencies
+      - *create_rubygems_credentials
+      - *publish_new_version
 
 workflows:
   version: 2
@@ -79,3 +94,11 @@ workflows:
             branches:
               ignore:
                 - master
+      - deploy_beta:
+          requires:
+            - test
+            - build
+          filters:
+            branches:
+              only:
+                - develop

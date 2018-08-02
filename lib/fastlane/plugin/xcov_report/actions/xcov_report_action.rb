@@ -9,7 +9,7 @@ module Fastlane
         require "erb"
         require "json"
 
-        file = File.read(File.expand_path('coverage/report.json'))
+    file = File.read(File.expand_path('coverage/report.json'))
         data = JSON.parse(file)
         @coverage = data['coverage']
         @targets = data['targets']
