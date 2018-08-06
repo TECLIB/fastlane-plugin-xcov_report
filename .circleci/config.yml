@@ -15,6 +15,11 @@ references:
     run:
       name: Configure RubyGems credentials
       command: source ci/scripts/cofigure_rubygems_credentials.sh
+  
+  configure_git: &configure_git
+    run:
+      name: Configure GIT
+      command: source ci/scripts/git_config.sh
 
   # Dependencies
   install_dependencies: &install_dependencies
@@ -47,7 +52,6 @@ references:
     run:
       name: Publish new version
       command: |
-        source ci/scripts/git_config.sh
         source ci/scripts/publish_new_version.sh
         source ci/scripts/release.sh
 
@@ -75,6 +79,7 @@ jobs:
       - checkout
       - *install_dependencies
       - *create_rubygems_credentials
+      - *configure_git
       - *publish_beta
 
   release:
@@ -84,6 +89,7 @@ jobs:
       - checkout
       - *install_dependencies
       - *create_rubygems_credentials
+      - *configure_git
       - *publish_new_version
 
 workflows:
