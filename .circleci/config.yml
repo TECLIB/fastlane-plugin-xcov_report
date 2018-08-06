@@ -51,9 +51,12 @@ references:
   publish_new_version: &publish_new_version
     run:
       name: Publish new version
-      command: |
-        source ci/scripts/publish_new_version.sh
-        source ci/scripts/release.sh
+      command: source ci/scripts/publish_new_version.sh
+
+  release: &release
+    run:
+      name: Publish new version
+      command: source ci/scripts/release.sh
 
 jobs:
   test:
@@ -83,6 +86,15 @@ jobs:
       - *publish_beta
 
   release:
+    <<: *container_config
+
+    steps:
+      - checkout
+      - *install_dependencies
+      - *configure_git
+      - *release
+  
+  deploy:
     <<: *container_config
 
     steps:
@@ -119,3 +131,9 @@ workflows:
             branches:
               only:
                 - /^release/.*/
+
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
