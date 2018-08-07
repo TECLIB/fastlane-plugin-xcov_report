@@ -9,38 +9,19 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
 
     if [[ $CIRCLE_BRANCH != "$IS_PRERELEASE" ]]; then
         PREFIX_PRERELEASE="$( cut -d '.' -f 1 <<< "$IS_PRERELEASE" )";
-        npm release -- -m "ci(release): generate CHANGELOG.md for version %s" --prerelease "$PREFIX_PRERELEASE"
+        npm run release -- -m "ci(release): generate CHANGELOG.md for version %s" --prerelease "$PREFIX_PRERELEASE"
     else
-        npm release -- -m "ci(release): generate CHANGELOG.md for version %s"
+        npm run release -- -m "ci(release): generate CHANGELOG.md for version %s"
     fi
 
     # Get version number from package.json
     export GIT_TAG=$(jq -r ".version" package.json)
     # Copy CHANGELOG.md to gh-pages branch
-    npm gh-pages-changelog -- -m "ci(docs): generate CHANGELOG.md for version ${GIT_TAG}"
+    npm run gh-pages-changelog -- -m "ci(docs): generate CHANGELOG.md for version ${GIT_TAG}"
     # Push commits and tags to origin branch
     git push --follow-tags origin $CIRCLE_BRANCH
     # Create release with conventional-github-releaser
-    npm conventional-github-releaser -- -p angular -t $GITHUB_TOKEN
-
-    if [[ $CIRCLE_BRANCH != "$IS_PRERELEASE" ]]; then
-        # Upload build file to release
-        npm github-release -- upload \
-        --user "${CIRCLE_PROJECT_USERNAME}" \
-        --repo "${CIRCLE_PROJECT_REPONAME}" \
-        --tag "v${GIT_TAG}" \
-        --name "build.zip" \
-        --file "./build.zip"
-    else
-        # Upload build file to prerelease
-        npm github-release -- upload \
-        --user "${CIRCLE_PROJECT_USERNAME}" \
-        --repo "${CIRCLE_PROJECT_REPONAME}" \
-        --tag "v${GIT_TAG}" \
-        --name "build.zip" \
-        --file "./build.zip" \
-        --pre-release
-    fi
+    npm run conventional-github-releaser -- -p angular -t $GITHUB_TOKEN
 
     # Update develop branch
     git fetch origin develop

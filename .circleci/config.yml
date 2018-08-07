@@ -55,7 +55,7 @@ references:
 
   release: &release
     run:
-      name: Publish new version
+      name: Create release
       command: source ci/scripts/release.sh
 
 jobs:
@@ -127,6 +127,9 @@ workflows:
               only:
                 - develop
       - release:
+          requires:
+            - test
+            - build
           filters:
             branches:
               only:
