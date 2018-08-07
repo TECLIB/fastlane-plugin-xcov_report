@@ -9,7 +9,7 @@ module Fastlane
         require "erb"
         require "json"
 
-    file = File.read(File.expand_path('coverage/report.json'))
+    file = File.read(File.expand_path(params[:json_path]))
         data = JSON.parse(file)
         @coverage = data['coverage']
         @targets = data['targets']
@@ -104,11 +104,13 @@ layout: coverage
 
       def self.available_options
         [
-          # FastlaneCore::ConfigItem.new(key: :your_option,
-          #                         env_name: "XCOV_REPORT_YOUR_OPTION",
-          #                      description: "A description of your option",
-          #                         optional: false,
-          #                             type: String)
+            FastlaneCore::ConfigItem.new(
+                key: :json_path,
+                env_name: "XCOV_REPORT_JSON_PATH",
+                description: "Path relative to your json file of the coverage report",
+                is_string: true,
+                default_value: 'coverage/report.json'
+            )
         ]
       end
 
